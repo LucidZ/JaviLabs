@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/assets/Quicksand.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --color-primary-bg: #121614;
+  --color-card-bg: #1B211E;
+  --color-accent-gold: #C3A25D;
+  --color-primary-green: #1B3022;
+  --color-typography: #E0E0E0;
+
+  --font-family-quicksand: 'Quicksand', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', 'Montserrat', 'Roboto', system-ui, -apple-system, sans-serif;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(195, 162, 93, 0.3);
+}
+
+.card-glow {
+  box-shadow: 0 4px 20px rgba(195, 162, 93, 0.1);
+}
+
+.circuit-bg {
+  background-image:
+    linear-gradient(rgba(27, 48, 34, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 48, 34, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
