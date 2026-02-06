@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { DataScienceIcon, DataVizIcon, MobileAppIcon } from './components/Icons';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,22 +21,22 @@ function App() {
           }`}
         >
           {/* Logo */}
-          <div className="mb-12 animate-fade-in">
+          <div className="mb-8 animate-fade-in">
             <img
-              src="/assets/logo-full.png"
-              alt="Javi Labs LLC"
-              className="w-64 md:w-80 lg:w-96 mx-auto drop-shadow-2xl"
+              src="/assets/logo-beaker-only.svg"
+              alt="Javi Labs"
+              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto drop-shadow-2xl"
             />
           </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-glow font-quicksand">
-            Innovation Brews Here
+          {/* Company Name */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-accent-gold font-quicksand tracking-wider">
+            JAVI LABS LLC
           </h1>
 
-          {/* Sub-headline */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-typography/80 mb-12 font-light">
-            Turning Curiosity Into Code
+          {/* Tagline */}
+          <p className="text-lg md:text-xl text-typography/80 mb-12 font-light italic">
+            Passionately Curious
           </p>
 
           {/* CTA Button */}
@@ -71,9 +70,6 @@ function App() {
             <div className="bg-card-bg border border-primary-green rounded-xl p-8
                           hover:scale-105 hover:card-glow transition-all duration-300
                           group cursor-pointer">
-              <div className="flex justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <DataScienceIcon className="w-20 h-20" />
-              </div>
               <h3 className="text-2xl font-bold text-accent-gold mb-4 text-center font-quicksand">
                 Data Science Consulting
               </h3>
@@ -87,9 +83,6 @@ function App() {
             <div className="bg-card-bg border border-primary-green rounded-xl p-8
                           hover:scale-105 hover:card-glow transition-all duration-300
                           group cursor-pointer">
-              <div className="flex justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <DataVizIcon className="w-20 h-20" />
-              </div>
               <h3 className="text-2xl font-bold text-accent-gold mb-4 text-center font-quicksand">
                 Data Visualization Consulting
               </h3>
@@ -103,9 +96,6 @@ function App() {
             <div className="bg-card-bg border border-primary-green rounded-xl p-8
                           hover:scale-105 hover:card-glow transition-all duration-300
                           group cursor-pointer">
-              <div className="flex justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <MobileAppIcon className="w-20 h-20" />
-              </div>
               <h3 className="text-2xl font-bold text-accent-gold mb-4 text-center font-quicksand">
                 Mobile Apps
               </h3>
