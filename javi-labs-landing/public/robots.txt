@@ -1,0 +1,11 @@
+# robots.txt for Javi Labs LLC
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://javilabs.dev/sitemap.xml
+
+# Disallow crawling of any future admin or private areas
+# (none currently, but good practice)
+Disallow: /admin/
+Disallow: /_private/
