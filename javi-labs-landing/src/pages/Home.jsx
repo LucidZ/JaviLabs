@@ -122,8 +122,11 @@ function Home() {
             </div>
 
             {/* Mobile Apps Card */}
-            <div
-              className="bg-card-bg border border-primary-green rounded-xl p-8"
+            <Link
+              to="/apps"
+              className="bg-card-bg border border-primary-green rounded-xl p-8 block
+                         hover:border-accent-gold/60 hover:shadow-lg hover:shadow-accent-gold/10
+                         transition-all duration-300 group"
             >
               <h3 className="text-2xl font-bold text-accent-gold mb-4 text-center font-quicksand">
                 Mobile Apps
@@ -135,7 +138,10 @@ function Home() {
                 monetization. It's a passion project to create respectful,
                 user-focused technology.
               </p>
-            </div>
+              <p className="text-accent-gold/80 text-sm font-semibold text-center mt-5 group-hover:text-accent-gold transition-colors">
+                Browse apps →
+              </p>
+            </Link>
           </div>
 
           {/* CTA after Services */}

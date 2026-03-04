@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ContactModal from "../components/ContactModal";
 import ContactButton from "../components/ContactButton";
 
@@ -76,8 +77,30 @@ function Privacy() {
               </p>
               <p className="text-sm text-typography/60">
                 App-specific policies are accessible within each app's settings
-                and at javilabs.dev/privacy/[app-name]
+                and linked from each app's page at{" "}
+                <Link
+                  to="/apps"
+                  className="text-accent-gold hover:text-accent-gold/80 transition-colors"
+                >
+                  javilabs.dev/apps
+                </Link>
+                .
               </p>
+              <div className="mt-4 pt-4 border-t border-primary-green/20">
+                <p className="text-sm font-semibold text-accent-gold mb-2">
+                  App Policies:
+                </p>
+                <ul className="space-y-1">
+                  <li>
+                    <Link
+                      to="/privacy/habit-developer"
+                      className="text-sm text-accent-gold hover:text-accent-gold/80 transition-colors"
+                    >
+                      Habit Developer Privacy Policy →
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -192,7 +215,11 @@ function Privacy() {
                 <p className="mt-3 text-sm italic">
                   For specific details about what data each app collects, please
                   refer to that app's dedicated privacy policy accessible from
-                  within the app or at javilabs.dev/privacy/[app-name].
+                  within the app or via{" "}
+                  <Link to="/apps" className="text-accent-gold hover:text-accent-gold/80 transition-colors">
+                    our Apps page
+                  </Link>
+                  .
                 </p>
               </div>
 
