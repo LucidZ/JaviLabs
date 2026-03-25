@@ -45,7 +45,7 @@ function HabitDeveloperPrivacy() {
                 Privacy Policy
               </h1>
               <p className="text-typography/60 mt-1">
-                Habit Developer · Last updated: February 2026
+                Habit Developer · Last updated: March 2026
               </p>
             </div>
           </div>
@@ -91,22 +91,15 @@ function HabitDeveloperPrivacy() {
           {/* Analytics */}
           <section className="bg-card-bg border border-primary-green rounded-xl p-8">
             <h2 className="text-2xl font-bold text-accent-gold mb-4 font-quicksand">
-              Analytics (Optional)
+              Analytics
             </h2>
-            <div className="space-y-4 text-typography/80 leading-relaxed">
-              <p>
-                If you choose to opt in, we collect anonymous usage data using
-                PostHog to help us understand how the app is used and improve
-                it. This data includes: which features are used, how often
-                habits are completed, and general app interactions. It does not
-                include your name, email, photos, habit content, or any
-                personally identifiable information.
-              </p>
-              <p>
-                Analytics are strictly opt-in. You can change your preference
-                at any time in the app settings.
-              </p>
-            </div>
+            <p className="text-typography/80 leading-relaxed">
+              We do not collect any personal data or usage analytics from within
+              the app. The only analytics we use are Apple's App Store Connect
+              aggregate statistics (downloads, crash reports), which Apple
+              provides automatically and do not include any personally
+              identifiable information.
+            </p>
           </section>
 
           {/* Data Storage */}
@@ -127,16 +120,10 @@ function HabitDeveloperPrivacy() {
               Third-Party Services
             </h2>
             <p className="text-typography/80 leading-relaxed">
-              If you opt in to analytics, data is processed by{" "}
-              <a
-                href="https://posthog.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent-gold hover:text-accent-gold/80 transition-colors"
-              >
-                PostHog
-              </a>{" "}
-              (posthog.com). No other third-party services are used.
+              We do not use any third-party analytics or tracking services
+              within the app. Apple's App Store Connect provides aggregate,
+              anonymized statistics as part of the standard iOS distribution
+              platform. No other third-party services are used.
             </p>
           </section>
 
@@ -201,6 +188,7 @@ function HabitDeveloperPrivacy() {
       <ContactModal
         isOpen={isContactModalOpen}
         onClose={() => setIsContactModalOpen(false)}
+        context="habit-developer"
       />
 
       {/* Footer */}

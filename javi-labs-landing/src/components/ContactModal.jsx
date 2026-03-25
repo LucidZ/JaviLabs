@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function ContactModal({ isOpen, onClose }) {
+function ContactModal({ isOpen, onClose, context = "general" }) {
   const [formData, setFormData] = useState({
     email: "",
     subject: "",
@@ -274,17 +274,28 @@ function ContactModal({ isOpen, onClose }) {
                            transition-colors"
                 >
                   <option value="">Select a topic...</option>
-                  <option value="Consulting: Data Science">
-                    Consulting: Data Science
-                  </option>
-                  <option value="Consulting: Data Visualization">
-                    Consulting: Data Visualization
-                  </option>
-                  <option value="Mobile App Development">
-                    Mobile App Development
-                  </option>
-                  <option value="Data Privacy">Data Privacy</option>
-                  <option value="Other">Other</option>
+                  {context === "habit-developer" ? (
+                    <>
+                      <option value="Bug Report">Bug Report</option>
+                      <option value="Feature Request">Feature Request</option>
+                      <option value="General Question">General Question</option>
+                      <option value="Other">Other</option>
+                    </>
+                  ) : (
+                    <>
+                      <option value="Consulting: Data Science">
+                        Consulting: Data Science
+                      </option>
+                      <option value="Consulting: Data Visualization">
+                        Consulting: Data Visualization
+                      </option>
+                      <option value="Mobile App Development">
+                        Mobile App Development
+                      </option>
+                      <option value="Data Privacy">Data Privacy</option>
+                      <option value="Other">Other</option>
+                    </>
+                  )}
                 </select>
               </div>
 

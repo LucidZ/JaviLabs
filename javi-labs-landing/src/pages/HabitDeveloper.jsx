@@ -1,7 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import ContactModal from "../components/ContactModal";
+import ContactButton from "../components/ContactButton";
 
 function HabitDeveloper() {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -85,7 +89,7 @@ function HabitDeveloper() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent-gold mt-1">✓</span>
-                Analytics are strictly opt-in and anonymous
+                No analytics collected from within the app
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent-gold mt-1">✓</span>
@@ -105,8 +109,31 @@ function HabitDeveloper() {
             <p className="text-typography/60 text-sm">Available on the App Store</p>
             <p className="text-typography/40 text-xs mt-2">Link coming soon</p>
           </section>
+
+          {/* Support */}
+          <section className="bg-card-bg border border-primary-green rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-accent-gold mb-4 font-quicksand">
+              Support
+            </h2>
+            <p className="text-typography/80 leading-relaxed mb-6">
+              Have a question or ran into an issue? We're happy to help.
+            </p>
+            <ContactButton
+              onClick={() => setIsContactModalOpen(true)}
+              variant="primary"
+            >
+              Contact Us
+            </ContactButton>
+          </section>
         </div>
       </main>
+
+      {/* Contact Modal */}
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        context="habit-developer"
+      />
 
       {/* Footer */}
       <footer className="py-8 px-6 bg-card-bg border-t border-primary-green mt-12">
