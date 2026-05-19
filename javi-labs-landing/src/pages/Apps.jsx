@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 
 function Apps() {
   useEffect(() => {
@@ -44,8 +43,10 @@ function Apps() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Habit Developer */}
-            <Link
-              to="/apps/habit-developer"
+            <a
+              href="https://habitdeveloper.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-card-bg border border-primary-green rounded-xl p-8 flex flex-col items-center text-center
                          hover:border-accent-gold/60 hover:shadow-lg hover:shadow-accent-gold/10
                          transition-all duration-300 group"
@@ -63,9 +64,9 @@ function Apps() {
                 motivated. All data stays on your device.
               </p>
               <span className="mt-5 text-accent-gold/80 text-sm font-semibold group-hover:text-accent-gold transition-colors">
-                Learn more →
+                Visit habitdeveloper.com →
               </span>
-            </Link>
+            </a>
           </div>
         </div>
       </main>
